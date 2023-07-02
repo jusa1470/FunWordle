@@ -11,11 +11,21 @@ body {
 	padding-right: 15%;
 }
 
-header {
+header, footer {
 	text-align: center;
 	background: var(--green);
 	color: var(--teal);
 	font-size: 50px;
+	height: 10%;
+	white-space: pre-line;
+	vertical-align: middle;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+	font-size: 10px;
 }
 
 .container {
@@ -33,12 +43,4 @@ header {
 	margin: 5px 0;
 	padding-left: 25%;
 	padding-right: 25%;
-}
-
-footer {
-	text-align: center;
-	background: var(--green);
-	color: var(--grey);
-	font-size: 20px;
-	white-space: pre-line;
 }
