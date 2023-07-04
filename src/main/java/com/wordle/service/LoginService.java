@@ -7,10 +7,8 @@ import com.wordle.data.Client;
 @Service
 public class LoginService {
 
-	public boolean validateUser(Client client) {
-		System.out.println("DID IT!!!!!!!");
-		
-		return false;
+	public boolean validateUser(Client client) {		
+		return true;
 	}
 
 }

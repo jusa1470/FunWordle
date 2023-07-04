@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>Fun Wordle</title>
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	
+	<%@ include file="common/header.jspf"%>
+	
+	<body>
+		<div class="container">
+			<div class="status">
+				<p>Test</p>
+				<font color="red">${errorMessage}</font>
+				<font color="green">${successMessage}</font>
+				<a href="redirect:/">Back</a>
+			</div>
+		</div>
+	</body>
+	
+	<%@ include file="common/footer.jspf"%>
+	
+</html>

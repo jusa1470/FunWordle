@@ -7,10 +7,8 @@ import com.wordle.data.Client;
 @Service
 public class SignUpService {
 
-	public boolean verifyUniqueUsername(String username) {
-		
-		
-		return true;
+	public boolean verifyUniqueUsername(String username) {		
+		return false;
 	}
 	
 	public boolean verifyPasswordCredentials(String password) {
