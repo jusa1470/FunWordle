@@ -1,6 +1,7 @@
 package com.wordle.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,18 +12,11 @@ import jakarta.servlet.http.HttpServletRequest;
 @Controller
 public class StatusController {
 
-	@RequestMapping(value="/status", method=RequestMethod.GET)
-	public ModelAndView status() {
-		System.out.println("******STATUS*****");
-		return new ModelAndView("status");
-	}
-	
-	@ExceptionHandler(Exception.class)
-	public ModelAndView handleError(HttpServletRequest req, Exception ex) {	
-		ModelAndView mav = new ModelAndView("error");
-		mav.addObject("exception", ex);
-		mav.addObject("url", req.getRequestURL());
-	    return mav;
+	@RequestMapping(value = "/status", method = { RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView getStatus(ModelAndView mav) {
+		System.out.println("******GET STATUS*****");
+		mav.setViewName("status");
+		return mav;
 	}
 
 }

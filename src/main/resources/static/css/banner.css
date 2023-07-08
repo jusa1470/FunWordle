@@ -5,12 +5,6 @@
 	--grey: #E8F3F1;
 }
 
-body {
-	background-color: black;
-	padding-left: 15%;
-	padding-right: 15%;
-}
-
 header, footer {
 	text-align: center;
 	background: var(--green);
@@ -26,21 +20,4 @@ header, footer {
 
 footer {
 	font-size: 10px;
-}
-
-.container {
-	background-color: var(--grey);
-	color: var(--pink);
-	padding: 5%;
-}
-
-.container h1 {
-	text-align: center;
-}
-
-.form-item {
-	text-align: center;
-	margin: 5px 0;
-	padding-left: 25%;
-	padding-right: 25%;
 }

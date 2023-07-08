@@ -1,19 +1,26 @@
 package com.wordle.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-public class FunWordleAppConfiguration {
-
-	@Autowired
-	private ErrorAttributes errorAttributes;
-
-	public FunWordleAppConfiguration(ErrorAttributes errorAttributes) {
-		this.errorAttributes = errorAttributes;
-	}
+@Configuration
+public class FunWordleAppConfiguration implements WebMvcConfigurer {
 
 	@Bean
-	public FunWordleAppConfiguration appErrorController(){return new FunWordleAppConfiguration(errorAttributes);}
+	public InternalResourceViewResolver getViewResolver() {
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setPrefix("/WEB-INF/view/");
+		viewResolver.setSuffix(".jsp");
+		return viewResolver;
+	}
+
+  	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("home");
+		registry.addViewController("/home").setViewName("home");
+	}
 
 }

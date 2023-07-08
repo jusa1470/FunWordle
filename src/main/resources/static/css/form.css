@@ -1,0 +1,39 @@
+:root {
+	--teal: #75E6DA;
+	--green: #003F38;
+	--pink: #AE1586;
+	--grey: #E8F3F1;
+}
+
+body {
+	background-color: black;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.container {
+	background-color: var(--grey);
+	color: var(--pink);
+	padding: 5%;
+	display: grid;
+  justify-content: center;
+}
+
+#button {
+	text-align: center;
+	padding-top: 5%;
+}
+
+#success {
+	text-align: center;
+	font-style: italic;
+	color: var(--pink);
+	white-space: pre-line;
+}
+
+#error {
+	text-align: center;
+	font-style: italic;
+	color: red;
+	white-space: pre-line;
+}

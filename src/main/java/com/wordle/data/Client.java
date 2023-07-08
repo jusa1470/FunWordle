@@ -11,11 +11,11 @@ import lombok.Data;
 @Entity
 @Table(name = "client")
 public class Client {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	private String firstName;
 	private String lastName;
 	private String username;

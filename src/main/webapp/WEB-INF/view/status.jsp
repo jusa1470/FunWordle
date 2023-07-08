@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html xmlns:th="http://www.thymeleaf.org">
 
@@ -12,10 +14,11 @@
 	<body>
 		<div class="container">
 			<div class="status">
-				<p>Test</p>
-				<font color="red">${errorMessage}</font>
-				<font color="green">${successMessage}</font>
-				<a href="redirect:/">Back</a>
+				${errorMessage}
+				<p>${errorMessage}</p>
+				<p th:text="${errorMessage}"/>
+				<p th:text="${successMessage}"/>
+				<a href="/">Back</a>
 			</div>
 		</div>
 	</body>
