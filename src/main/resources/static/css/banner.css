@@ -1,0 +1,23 @@
+:root {
+	--teal: #75E6DA;
+	--green: #003F38;
+	--pink: #AE1586;
+	--grey: #E8F3F1;
+}
+
+header, footer {
+	text-align: center;
+	background: var(--green);
+	color: var(--teal);
+	font-size: 50px;
+	height: 10%;
+	white-space: pre-line;
+	vertical-align: middle;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+	font-size: 10px;
+}
