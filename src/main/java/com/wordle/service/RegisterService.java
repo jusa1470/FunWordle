@@ -20,9 +20,12 @@ public class RegisterService {
 	}
 
 	public boolean verifyPasswordCredentials(String password) {
-		String regex = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])";
+		String regex = "^(?=.*[0-9a-zA-Z]).{1,}$";
 		Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
+        System.out.println(pattern);
+        System.out.println(password);
+        System.out.println(matcher.matches());
         return matcher.matches();
 	}
 
